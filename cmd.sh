@@ -12,7 +12,7 @@
 ########################################
 
 mkdir ~/.ssh
-echo $GIT_PRIVATE_KEY > ~/.ssh/id_rsa
+printf '%s\n' "$GIT_PRIVATE_KEY" > ~/.ssh/id_rsa
 ssh-keyscan -t rsa $GIT_REPO_HOST >> ~/.ssh/known_hosts
 chmod -R 700 ~/.ssh
 
