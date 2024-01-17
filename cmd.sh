@@ -27,4 +27,4 @@ cd ~/accounting
 
 set -o pipefail
 ./email_importer/app/main.py &&
-git add . && git commit -m "Email alerts import $(date -Iseconds)" && git push
+(git add . && git commit -m "Email alerts import $(date -Iseconds)" && git push) || true
