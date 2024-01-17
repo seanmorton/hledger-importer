@@ -26,5 +26,5 @@ mkdir -p ~/accounting/email_importer/mail/new ~/accounting/email_importer/mail/t
 cd ~/accounting
 
 set -o pipefail
-(./email_importer/app/main.py 2>&1 | tee -a email_importer/log) &&
+./email_importer/app/main.py &&
 git add . && git commit -m "Email alerts import $(date -Iseconds)" && git push
