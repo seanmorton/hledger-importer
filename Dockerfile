@@ -6,7 +6,7 @@ RUN apk update && \
     apk add --update openssh && \
     apk add hledger --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
-RUN pip install --no-cache-dir getmail6
+RUN pip install --no-cache-dir -v "getmail6==v6.18.10"
 
 RUN mkdir -p /home/hledger
 RUN addgroup hledger && \

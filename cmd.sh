@@ -22,7 +22,7 @@ git clone $GIT_REPO_URL accounting
 
 export LEDGER_FILE="/home/hledger/accounting/$LEDGER_FILE_NAME"
 echo $GETMAIL_PW > /tmp/getmailpw
-mkdir -p ~/accounting/email_importer/mail/new ~/accounting/email_importer/mail/tmp
+mkdir -p ~/accounting/email_importer/mail/new ~/accounting/email_importer/mail/cur ~/accounting/email_importer/mail/tmp
 cd ~/accounting
 
 set -o pipefail
