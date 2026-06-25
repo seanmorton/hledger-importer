@@ -6,6 +6,7 @@
 # * GIT_USER_EMAIL
 # * GIT_PRIVATE_KEY
 # * GIT_REPO_HOST
+# * GIT_REPO_PORT
 # * GIT_REPO_URL
 # * LEDGER_FILE_NAME
 # * GETMAIL_PW
@@ -13,7 +14,7 @@
 
 mkdir ~/.ssh
 printf '%s\n' "$GIT_PRIVATE_KEY" > ~/.ssh/id_rsa
-ssh-keyscan -t rsa $GIT_REPO_HOST >> ~/.ssh/known_hosts
+ssh-keyscan -t rsa -p $GIT_REPO_PORT $GIT_REPO_HOST >> ~/.ssh/known_hosts
 chmod -R 700 ~/.ssh
 
 git config --global user.name $GIT_USER_NAME
